@@ -12,6 +12,13 @@ body {
   color: #1c1917;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
+  overflow-x: hidden;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
 }
 
 .site {
@@ -26,21 +33,26 @@ body {
   padding: 72px 24px;
 }
 
+.white,
+.dark {
+  max-width: none;
+  padding: 72px 24px;
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 .white {
   background: #ffffff;
   border-top: 1px solid #e7e5e4;
   border-bottom: 1px solid #e7e5e4;
-  max-width: none;
-  padding-left: max(24px, calc((100vw - 1100px) / 2));
-  padding-right: max(24px, calc((100vw - 1100px) / 2));
 }
 
 .dark {
   background: #1c1917;
   color: #fafaf9;
-  max-width: none;
-  padding-left: max(24px, calc((100vw - 1100px) / 2));
-  padding-right: max(24px, calc((100vw - 1100px) / 2));
 }
 
 .pill {
@@ -59,6 +71,7 @@ h1 {
   font-size: clamp(42px, 8vw, 82px);
   line-height: 0.98;
   letter-spacing: -0.03em;
+  word-break: break-word;
 }
 
 h1 span {
@@ -88,13 +101,18 @@ h3 {
 .small-note,
 .info-card p,
 .booking-note {
-  font-size: 20px;
   color: #44403c;
 }
 
 .lede {
   max-width: 760px;
   margin-top: 24px;
+  font-size: 20px;
+}
+
+.body-copy {
+  font-size: 20px;
+  line-height: 1.7;
 }
 
 .actions {
@@ -271,14 +289,10 @@ h3 {
 
   .hero,
   .section,
-  .card-section {
-    padding: 56px 20px;
-  }
-
+  .card-section,
   .white,
   .dark {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 56px 20px;
   }
 
   .examples div,
